@@ -1,0 +1,17 @@
+logging:
+  config: "classpath:logback-dev.xml"
+  level:
+    root: info
+    com.viomi.message: debug
+spring:
+  datasource:
+    url: jdbc:mysql://192.168.1.250:3306/vm_device?autoReconnect=true&failOverReadOnly=false&useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=GMT
+    username: viomi
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: none
+      dialect: org.hibernate.dialect.H2Dialect
+    show-sql: true
+    database: mysql
